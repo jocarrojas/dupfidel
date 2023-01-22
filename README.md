@@ -1,4 +1,4 @@
-# duplicate-deleter
+# batch-duplicate-deleter
 
 Little batch using Swiss File Knife (SFK) to delete duplicates by type ⚡⚡⚡.
 
