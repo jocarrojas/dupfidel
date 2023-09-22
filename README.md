@@ -1,4 +1,4 @@
-# batch-duplicate-deleter
+# Dufidel
 
 Little batch using Swiss File Knife (SFK) to find and delete duplicates by type ⚡⚡⚡.
 
