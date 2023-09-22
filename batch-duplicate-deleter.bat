@@ -5,13 +5,16 @@ ECHO 1 = Images
 ECHO 2 = Music
 ECHO 3 = Videos
 ECHO 4 = Documents
+ECHO 5 = All/Others
 ECHO.
+
 SET /P TYPE=
 ECHO.
 IF %TYPE%==1 GOTO= :images
 IF %TYPE%==2 GOTO= :music
 IF %TYPE%==3 GOTO= :videos
 IF %TYPE%==4 GOTO= :docs
+IF %TYPE%==5 GOTO= :all
 
 :images
 ECHO Choose the extension *ex: press 1 for jpg
@@ -65,14 +68,20 @@ IF %FILE_EXT_INPUT%==2 SET FILE_EXT=odt
 IF %FILE_EXT_INPUT%==3 SET FILE_EXT=txt
 GOTO= :location
 
-:location 
+:all
+ECHO All kinds of files selected.
+ECHO.
+SET FILE_EXT=*
+GOTO= :location
+
+:location
 SET SEARCH_PATH=.
 ECHO.
 ECHO Write the location of the folder where the duplicated files will be deleted and press enter
 ECHO.
-SET /P INPUT= 
+SET /P INPUT=
 ECHO.
-ECHO You have selected the following location: 
+ECHO You have selected the following location:
 ECHO.
 ECHO %INPUT%
 ECHO.
@@ -97,3 +106,4 @@ EXIT
 ECHO Deleting duplicate files...
 sfk dupfind %INPUT% .%FILE_EXT% +del -yes
 PAUSE
+
