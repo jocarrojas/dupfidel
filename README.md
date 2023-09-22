@@ -1,6 +1,6 @@
 # Dupfidel
 
-Duplicate Finder and Deleter - Dufidel
+Duplicate Finder and Deleter - Dupfidel
 
 Little batch using Swiss File Knife (SFK) to find and delete duplicates by type ⚡⚡⚡.
 
